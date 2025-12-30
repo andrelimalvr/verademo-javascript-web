@@ -59,11 +59,11 @@ jobs:
           ls -l
 
       - name: upload and scan 
-        uses: veracode/veracode-uploadandscan-action@0.2.7
+        uses: veracode/veracode-uploadandscan-action@0.2.11
         with:
           appname: 'm3academy-javascript-web'
           createprofile: true
-          teams: 'M3Academy'
+         #teams: 'M3Academy'
           filepath: 'upload.zip'
           vid: '${{ secrets.VID }}'
           vkey: '${{ secrets.VKEY }}'
@@ -92,11 +92,11 @@ jobs:
           ls -l
 
       - name: upload and scan 
-        uses: veracode/veracode-uploadandscan-action@0.2.7
+        uses: veracode/veracode-uploadandscan-action@0.2.11
         with:
           appname: 'm3academy-javascript-web'
           createprofile: true
-          teams: 'M3Academy'
+         #teams: 'M3Academy'
           filepath: 'upload.zip'
           vid: '${{ secrets.VID }}'
           vkey: '${{ secrets.VKEY }}'
@@ -106,7 +106,7 @@ jobs:
 
       - name: pipeline-scan action step
         id: pipeline-scan
-        uses: veracode/Veracode-pipeline-scan-action@v1.0.18
+        uses: veracode/Veracode-pipeline-scan-action@v1.0.20
         with:
           vid: ${{ secrets.VID }}
           vkey: ${{ secrets.VKEY }}
